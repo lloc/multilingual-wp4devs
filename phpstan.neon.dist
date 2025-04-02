@@ -1,0 +1,11 @@
+includes:
+    - vendor/phpstan/phpstan-deprecation-rules/rules.neon
+    - vendor/swissspidy/phpstan-no-private/rules.neon
+parameters:
+    level: 5
+    scanFiles:
+        - vendor/inpsyde/wp-stubs-versions/latest.php
+    paths:
+        - src/
+        - index.php
+    treatPhpDocTypesAsCertain: false

@@ -1,0 +1,7 @@
+{
+    "core": null,
+    "plugins": [
+        ".",
+        "https://downloads.wordpress.org/plugin/query-monitor.zip"
+    ]
+}

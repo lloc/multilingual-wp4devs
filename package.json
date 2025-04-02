@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "build": "wp-scripts build --webpack-src-dir=src/ --output-path=js/"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.11",
+    "@wordpress/scripts": "^30.13.0"
+  }
+}

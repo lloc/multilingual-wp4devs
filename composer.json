@@ -1,0 +1,56 @@
+{
+    "name": "lloc/wceu-2025",
+    "description": "Multilingual WordPress for developers",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "autoload": {
+        "psr-4": {
+            "lloc\\Wceu2025\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dennis Ploetner",
+            "email": "re@lloc.de"
+        }
+    ],
+    "minimum-stability": "dev",
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "require": {
+       "php": ">=8.1"
+    },
+    "require-dev": {
+        "syde/phpcs": "dev-main",
+        "inpsyde/wp-stubs-versions": "dev-latest",
+        "phpstan/phpstan": "2.1.x-dev",
+        "phpstan/phpstan-deprecation-rules": "2.0.x-dev",
+        "swissspidy/phpstan-no-private": "dev-main"
+    },
+    "scripts": {
+        "cs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs",
+        "phpstan": "@php ./vendor/bin/phpstan analyse --memory-limit=1G",
+        "qa": [
+            "@cs",
+            "@phpstan"
+        ],
+        "translation:create": "wp i18n make-pot ./ languages/wceu-2025.pot",
+        "build": [
+            "@composer install --no-dev",
+            "npm ci",
+            "npm run build"
+        ]
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://raw.githubusercontent.com/inpsyde/wp-stubs/main",
+            "only": [
+                "inpsyde/wp-stubs-versions"
+            ]
+        }
+    ]
+}
