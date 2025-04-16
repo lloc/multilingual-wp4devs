@@ -1,6 +1,5 @@
 # Multilingual WordPress for developers
 
-This plugin is a companion to the “Multilingual WordPress for Developers” talk at WordCamp Europe 2025. It showcases practical examples and techniques covered in the session, helping developers tackle the rewarding challenge of creating multilingual WordPress websites.
+This plugin is a companion to my talk “Multilingual WordPress for Developers”. It includes practical examples and techniques covered during the session, aimed at helping developers build multilingual WordPress websites confidently.
 
-Explore how to use WordPress’s core internationalization (i18n) and localization (l10n) capabilities, implement multilingual setups with multisite or plugins, and extend functionality with custom code — all aimed at streamlining your multilingual development workflow.
-
+Discover how to make the most of WordPress’s internationalisation (i18n) and localisation (l10n) features, set up multilingual environments using multisite or plugins, and enhance your workflow with custom code — all focused on simplifying multilingual development.
