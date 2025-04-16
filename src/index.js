@@ -10,12 +10,12 @@ registerBlockType('lloc/wceu-2025', {
     edit: () => {
         const blockProps = useBlockProps({ style: { color: '#9fca28' } });
 
-        return < p { ...blockProps } > { __('Hello WCEU 2025', 'wceu-2025') } < / p > ;
+        return < p { ...blockProps } > { __('Demo Block - WCEU 2025', 'wceu-2025') } < / p > ;
     },
 
     save: () => {
         const blockProps = useBlockProps.save({ style: { color: '#9fca28' } });
 
-        return < p { ...blockProps } > { __('Hello WCEU 2025', 'wceu-2025') } < / p > ;
+        return < p { ...blockProps } > { __('Demo Block - WCEU 2025', 'wceu-2025') } < / p > ;
     },
 });
