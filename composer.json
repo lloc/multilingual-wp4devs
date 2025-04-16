@@ -5,7 +5,7 @@
     "license": "GPL-2.0-or-later",
     "autoload": {
         "psr-4": {
-            "lloc\\MultilingualWordPress\\": "include/"
+            "lloc\\MultilingualWP4Devs\\": "include/"
         }
     },
     "authors": [
@@ -17,15 +17,19 @@
     "minimum-stability": "dev",
     "config": {
         "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "phpstan/extension-installer": true
         }
     },
     "require": {
        "php": ">=8.1"
     },
     "require-dev": {
+        "brain/monkey": "^2.6",
+        "szepeviktor/phpstan-wordpress": "^2.0.0",
+        "phpstan/extension-installer": "^1.3",
         "wp-coding-standards/wpcs": "^3.1"
-     },
+    },
     "scripts": {
         "cs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs",
         "phpstan": "@php ./vendor/bin/phpstan analyse --memory-limit=1G",
@@ -33,10 +37,10 @@
             "@cs",
             "@phpstan"
         ],
-        "i18n:pot": "wp i18n make-pot . languages/wceu-2025.pot",
+        "i18n:pot": "wp i18n make-pot . languages/multilingual-wp4devs.pot",
         "i18n:po": [
-            "if [ ! -e languages/wceu-2025-de_DE.po ]; then cp languages/wceu-2025.pot languages/wceu-2025-de_DE.po; fi",
-            "wp i18n update-po languages/wceu-2025.pot languages"
+            "if [ ! -e languages/multilingual-wp4devs-de_DE.po ]; then cp languages/multilingual-wp4devs.pot languages/multilingual-wp4devs-de_DE.po; fi",
+            "wp i18n update-po languages/multilingual-wp4devs.pot languages"
         ],
         "i18n:mo": "wp i18n make-mo languages",
         "i18n:json": "wp i18n make-json languages --no-purge",

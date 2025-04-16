@@ -1,0 +1,72 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Multilingual 4 Devs 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wceu-2025\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-04-16T11:06:38+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language: \n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: multilingual-wp4devs\n"
+
+#. Plugin Name of the plugin
+#: index.php
+msgid "Multilingual 4 Devs"
+msgstr ""
+
+#. Description of the plugin
+#: index.php
+msgid "Companion plugin for my talk \"Multilingual WordPress for developers\" at various WordCamps."
+msgstr ""
+
+#. Author of the plugin
+#: index.php
+msgid "Dennis Plötner"
+msgstr ""
+
+#. Author URI of the plugin
+#: index.php
+msgid "http://lloc.de/"
+msgstr ""
+
+#: include/ApiFunctions.php:8
+#: include/ApiFunctions.php:23
+msgid "Demo Content"
+msgstr ""
+
+#: include/ApiFunctions.php:9
+msgctxt "other-context"
+msgid "Demo Content"
+msgstr ""
+
+#. translators: %d is an integer for a star-rating
+#: include/ApiFunctions.php:14
+msgid "Demo Content %d something"
+msgstr ""
+
+#. translators: %d is an integer for a star-rating
+#: include/ApiFunctions.php:17
+msgid "%d star"
+msgid_plural "%d stars"
+msgstr[0] ""
+msgstr[1] ""
+
+#: include/ApiFunctions.php:24
+msgctxt "other-context"
+msgid "Demo Meta"
+msgstr ""
+
+#: js/index.js:1
+#: src/index.js:7
+msgid "Demo Block"
+msgstr ""
+
+#: js/index.js:1
+#: src/index.js:13
+#: src/index.js:19
+msgid "Demo Block - Multilingual WordPress for developers"
+msgstr ""

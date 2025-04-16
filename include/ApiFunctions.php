@@ -8,9 +8,12 @@ class ApiFunctions {
 		$content .= __( 'Demo Content', 'multilingual-wp4devs' );
 		$content .= _x( 'Demo Content', 'other-context', 'multilingual-wp4devs' );
 
-		/* translators: %d is an integer for a star-rating */
 		$stars    = 5;
+
+        /* translators: %d is an integer for a star-rating */
 		$content .= sprintf( __( 'Demo Content %d something', 'multilingual-wp4devs' ), $stars );
+
+        /* translators: %d is an integer for a star-rating */
 		$content .= sprintf( _n( '%d star', '%d stars', $stars, 'multilingual-wp4devs' ), $stars );
 
 		return $content;
