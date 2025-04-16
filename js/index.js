@@ -1,1 +1,10 @@
-(()=>{"use strict";const l=window.wp.i18n,e=window.wp.blocks,o=window.wp.blockEditor,s=window.ReactJSXRuntime;(0,e.registerBlockType)("lloc/multilingual-wp4devs",{apiVersion:3,title:(0,l.__)("Demo Block","multilingual-wp4devs"),category:"widgets",edit:()=>{const e=(0,o.useBlockProps)({style:{color:"#9fca28"}});return(0,s.jsxs)("p",{...e,children:[" ",(0,l.__)("Demo Block - Multilingual WordPress for developers","multilingual-wp4devs")," "]})},save:()=>{const e=o.useBlockProps.save({style:{color:"#9fca28"}});return(0,s.jsxs)("p",{...e,children:[" ",(0,l.__)("Demo Block - Multilingual WordPress for developers","multilingual-wp4devs")," "]})}})})();
+( ()=>{
+"use strict";const l = window.wp.i18n,
+e = window.wp.blocks,
+o = window.wp.blockEditor,
+s = window.ReactJSXRuntime;( 0, e.registerBlockType )( "lloc/multilingual-wp4devs", {apiVersion: 3, title: ( 0, l.__ )( "Demo Block", "multilingual-wp4devs" ), category: "widgets", edit: ()=>{
+const e = ( 0, o.useBlockProps )({style: {color: "#9fca28"}});return ( 0, s.jsxs )( "p", {...e, children: [ " ", ( 0, l.__ )( "Demo Block - Multilingual WordPress for developers", "multilingual-wp4devs" ), " " ]});
+}, save: ()=>{
+const e = o.useBlockProps.save({style: {color: "#9fca28"}});return ( 0, s.jsxs )( "p", {...e, children: [ " ", ( 0, l.__ )( "Demo Block - Multilingual WordPress for developers", "multilingual-wp4devs" ), " " ]});
+}});
+})();

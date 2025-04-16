@@ -3,7 +3,7 @@
 echo ""
 echo "phpcbf pre commit hook start"
 
-PHP_CS_FIXER="vendor/bin/phpcbf"
+PHP_CS_FIXER="composer fix"
 HAS_PHP_CS_FIXER=false
 
 # check if php-cs-fixer is installed as a composer dependency

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Multilingual 4 Devs
  *
@@ -28,6 +27,7 @@
  * @copyright Copyright (C) 2025, Dennis Plötner, re@lloc.de
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU General Public License, version 2 or later
  * @wordpress-plugin
+ * @package Multilingual4Devs
  */
 
 declare(strict_types=1);
@@ -36,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-use lloc\MultilingualWordPress\ApiFunctions;
+use lloc\Multilingual_WP4Devs\Api_Functions;
 
 /**
  * The hook 'init' should be used to load the plugin's translation files.
@@ -75,7 +75,7 @@ add_action(
 			plugin_dir_path( __FILE__ ) . 'languages'
 		);
 
-		add_filter( 'the_content', array( ApiFunctions::class, 'add_content' ) );
-		add_action( 'wp_head', array( ApiFunctions::class, 'add_meta' ) );
+		add_filter( 'the_content', array( Api_Functions::class, 'the_content' ) );
+		add_action( 'custom_output', array( Api_Functions::class, 'custom_output' ) );
 	}
 );

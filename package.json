@@ -3,7 +3,11 @@
     "build": "wp-scripts build --webpack-src-dir=src/ --output-path=js/"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.24.0",
     "@types/node": "^22.13.11",
-    "@wordpress/scripts": "^30.13.0"
+    "@wordpress/scripts": "^30.13.0",
+    "eslint": "^8.57.1",
+    "eslint-config-wordpress": "^2.0.0"
   }
 }
