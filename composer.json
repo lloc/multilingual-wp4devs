@@ -1,11 +1,11 @@
 {
-    "name": "lloc/wceu-2025",
+    "name": "lloc/multilingual-wp4devs",
     "description": "Multilingual WordPress for developers",
     "type": "wordpress-plugin",
     "license": "GPL-2.0-or-later",
     "autoload": {
         "psr-4": {
-            "lloc\\Wceu2025\\": "include/"
+            "lloc\\MultilingualWordPress\\": "include/"
         }
     },
     "authors": [
