@@ -76,6 +76,5 @@ add_action(
 		);
 
 		add_filter( 'the_content', array( Api_Functions::class, 'the_content' ) );
-		add_action( 'custom_output', array( Api_Functions::class, 'custom_output' ) );
 	}
 );

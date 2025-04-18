@@ -33,8 +33,8 @@
     "scripts": {
         "lint:php": "@php vendor/bin/phpcs --standard=WordPress --extensions=php --ignore=vendor,node_modules,languages,js .",
         "fix:php": "@php vendor/bin/phpcbf --standard=WordPress --extensions=php --ignore=vendor,node_modules,languages,js .",
-        "lint:js": "npx eslint \"**/src/*.js\"",
-        "fix:js": "npx eslint --fix \"**/js/*.js\"",
+        "lint:js": "npm run lint:js",
+        "fix:js": "npm run fix:js",
         "lint": ["@lint:php", "@lint:js"],
         "fix": ["@fix:php", "@fix:js"],
         "phpstan": "@php ./vendor/bin/phpstan analyse --memory-limit=1G",

@@ -15,16 +15,65 @@ namespace lloc\Multilingual_WP4Devs;
 class Api_Functions {
 
 	/**
-	 * Adds content to the given string.
+	 * Demos the use of WordPress API __ functions.
 	 *
-	 * @param string $content The content to be modified.
+	 * @return void
+	 */
+	public function demo__(): void {
+		$text = __( 'Demo Text', 'multilingual-wp4devs' );
+
+		// // Never trust translated strings — always escape them before output.
+		echo esc_html( $text );
+
+		// WordPress offers several methods to properly escape translated strings.
+		echo esc_html__( 'Demo Text', 'multilingual-wp4devs' );
+		echo esc_attr__( 'Demo Text', 'multilingual-wp4devs' );
+	}
+
+	/**
+	 * Demos the use of WordPress API _e functions.
 	 *
-	 * @return string The modified content.
+	 * @return void
+	 */
+	public function demo_e(): void {
+		_e( 'Demo Text with _e', 'multilingual-wp4devs' );
+
+		// WordPress offers several methods to properly escape translated strings.
+		esc_html_e( 'Demo Text with esc_html_e', 'multilingual-wp4devs' );
+		esc_attr_e( 'Demo Text with esc_attr_e', 'multilingual-wp4devs' );
+	}
+
+	/**
+	 * Demos the use of WordPress API _n functions.
+	 *
+	 * @return void
+	 */
+	public function demo_x() {
+		echo _x( 'Demo Text with _x', 'Demo Context', 'multilingual-wp4devs' );
+
+        // phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
+		_ex( 'Demo Text with _ex', 'Demo Context', 'multilingual-wp4devs' );
+
+		echo esc_html_x( 'Demo Text with esc_html_x', 'Demo Context', 'multilingual-wp4devs' );
+		echo esc_attr_x( 'Demo Text with esc_attr_x', 'Demo Context', 'multilingual-wp4devs' );
+	}
+
+	/**
+	 * Demos the use of WordPress API _n functions.
+	 *
+	 * @return void
+	 */
+	public function demo_n(): void {
+	}
+
+	/**
+	 * Callback for the_content filter.
+	 *
+	 * @param string $content The content to be filtered.
+	 *
+	 * @return string
 	 */
 	public static function the_content( string $content ): string {
-		$content .= __( 'Demo Content', 'multilingual-wp4devs' );
-		$content .= _x( 'Demo Content', 'other-context', 'multilingual-wp4devs' );
-
 		$stars = 5;
 
 		/* translators: %d is an integer for a star-rating */
@@ -34,15 +83,5 @@ class Api_Functions {
 		$content .= sprintf( _n( '%d star', '%d stars', $stars, 'multilingual-wp4devs' ), $stars );
 
 		return $content;
-	}
-
-	/**
-	 * Output into the head of a webpage.
-	 *
-	 * @return void
-	 */
-	public static function custom_output(): void {
-		_e( 'Demo Content', 'multilingual-wp4devs' );
-		_ex( 'Demo Meta', 'other-context', 'multilingual-wp4devs' );
 	}
 }
