@@ -31,7 +31,7 @@ class Api_Functions {
 	public function demo__(): void {
 		$text = __( 'Demo Text', 'multilingual-wp4devs' );
 
-		// // Never trust translated strings — always escape them before output.
+		// Never trust translated strings — always escape them before output.
 		echo esc_html( $text );
 
 		// WordPress offers several methods to properly escape translated strings.
@@ -59,8 +59,10 @@ class Api_Functions {
 	 * @return void
 	 */
 	public function demo_x() {
-        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		echo _x( 'Demo Text with _x', 'Demo Context', 'multilingual-wp4devs' );
+		$text = _x( 'Demo Text with _x', 'Demo Context', 'multilingual-wp4devs' );
+
+		// Never trust translated strings — always escape them before output.
+		echo esc_html( $text );
 
         // phpcs:ignore WordPress.Security.EscapeOutput.UnsafePrintingFunction
 		_ex( 'Demo Text with _ex', 'Demo Context', 'multilingual-wp4devs' );

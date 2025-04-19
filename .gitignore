@@ -1,4 +1,5 @@
-composer.lock
 .idea/
+.phpcs.cache
+composer.lock
 node_modules/
 vendor/
