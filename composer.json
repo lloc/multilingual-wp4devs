@@ -31,8 +31,8 @@
         "wp-coding-standards/wpcs": "^3.0"
     },
     "scripts": {
-        "lint:php": "@php vendor/bin/phpcs --standard=WordPress --extensions=php --ignore=vendor,node_modules,languages,js .",
-        "fix:php": "@php vendor/bin/phpcbf --standard=WordPress --extensions=php --ignore=vendor,node_modules,languages,js .",
+        "lint:php": "@php vendor/bin/phpcs --ignore=vendor,node_modules,languages,js .",
+        "fix:php": "@php vendor/bin/phpcbf --ignore=vendor,node_modules,languages,js .",
         "lint:js": "npm run lint:js",
         "fix:js": "npm run fix:js",
         "lint": ["@lint:php", "@lint:js"],

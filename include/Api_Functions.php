@@ -15,6 +15,15 @@ namespace lloc\Multilingual_WP4Devs;
 class Api_Functions {
 
 	/**
+	 * Initialize the class.
+	 *
+	 * @return void
+	 */
+	public static function init(): void {
+		add_filter( 'the_content', array( __CLASS__, 'the_content' ) );
+	}
+
+	/**
 	 * Demos the use of WordPress API __ functions.
 	 *
 	 * @return void
@@ -36,6 +45,7 @@ class Api_Functions {
 	 * @return void
 	 */
 	public function demo_e(): void {
+        // phpcs:ignore WordPress.Security.EscapeOutput.UnsafePrintingFunction
 		_e( 'Demo Text with _e', 'multilingual-wp4devs' );
 
 		// WordPress offers several methods to properly escape translated strings.
@@ -49,9 +59,10 @@ class Api_Functions {
 	 * @return void
 	 */
 	public function demo_x() {
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		echo _x( 'Demo Text with _x', 'Demo Context', 'multilingual-wp4devs' );
 
-        // phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
+        // phpcs:ignore WordPress.Security.EscapeOutput.UnsafePrintingFunction
 		_ex( 'Demo Text with _ex', 'Demo Context', 'multilingual-wp4devs' );
 
 		echo esc_html_x( 'Demo Text with esc_html_x', 'Demo Context', 'multilingual-wp4devs' );

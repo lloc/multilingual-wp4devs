@@ -13,11 +13,6 @@ msgstr ""
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: multilingual-wp4devs\n"
 
-#. Plugin Name of the plugin
-#: index.php
-msgid "Multilingual 4 Devs"
-msgstr ""
-
 #. Description of the plugin
 #: index.php
 msgid "Companion plugin for my talk \"Multilingual WordPress for developers\" at various WordCamps."
@@ -33,40 +28,68 @@ msgstr ""
 msgid "http://lloc.de/"
 msgstr ""
 
-#: include/ApiFunctions.php:8
-#: include/ApiFunctions.php:23
-msgid "Demo Content"
-msgstr ""
-
-#: include/ApiFunctions.php:9
-msgctxt "other-context"
-msgid "Demo Content"
-msgstr ""
-
 #. translators: %d is an integer for a star-rating
-#: include/ApiFunctions.php:14
+#: include/Api_Functions.php:91
 msgid "Demo Content %d something"
 msgstr ""
 
 #. translators: %d is an integer for a star-rating
-#: include/ApiFunctions.php:17
+#: include/Api_Functions.php:94
 msgid "%d star"
 msgid_plural "%d stars"
 msgstr[0] ""
 msgstr[1] ""
 
-#: include/ApiFunctions.php:24
-msgctxt "other-context"
-msgid "Demo Meta"
+#. Plugin Name of the plugin
+#: index.php
+msgid "Multilingual WordPress for developers"
+msgstr ""
+
+#: include/Api_Functions.php:32
+#: include/Api_Functions.php:38
+#: include/Api_Functions.php:39
+msgid "Demo Text"
+msgstr ""
+
+#: include/Api_Functions.php:49
+msgid "Demo Text with _e"
+msgstr ""
+
+#: include/Api_Functions.php:52
+msgid "Demo Text with esc_html_e"
+msgstr ""
+
+#: include/Api_Functions.php:53
+msgid "Demo Text with esc_attr_e"
+msgstr ""
+
+#: include/Api_Functions.php:63
+msgctxt "Demo Context"
+msgid "Demo Text with _x"
+msgstr ""
+
+#: include/Api_Functions.php:66
+msgctxt "Demo Context"
+msgid "Demo Text with _ex"
+msgstr ""
+
+#: include/Api_Functions.php:68
+msgctxt "Demo Context"
+msgid "Demo Text with esc_html_x"
+msgstr ""
+
+#: include/Api_Functions.php:69
+msgctxt "Demo Context"
+msgid "Demo Text with esc_attr_x"
 msgstr ""
 
 #: js/index.js:1
-#: src/index.js:7
-msgid "Demo Block"
+#: src/index.js:6
+msgid "Simple Block"
 msgstr ""
 
 #: js/index.js:1
-#: src/index.js:13
-#: src/index.js:19
-msgid "Demo Block - Multilingual WordPress for developers"
+#: src/index.js:10
+#: src/index.js:14
+msgid "Hello World"
 msgstr ""

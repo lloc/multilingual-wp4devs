@@ -1,8 +1,8 @@
 <?php
 /**
- * Multilingual 4 Devs
+ * Multilingual WordPress for developers
  *
- * Plugin Name: Multilingual 4 Devs
+ * Plugin Name: Multilingual WordPress for developers
  * Version: 1.0.0
  * Description: Companion plugin for my talk "Multilingual WordPress for developers" at various WordCamps.
  * Author: Dennis Plötner
@@ -36,7 +36,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-use lloc\Multilingual_WP4Devs\Api_Functions;
+if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+	require __DIR__ . '/vendor/autoload.php';
+}
 
 /**
  * The hook 'init' should be used to load the plugin's translation files.
@@ -75,6 +77,6 @@ add_action(
 			plugin_dir_path( __FILE__ ) . 'languages'
 		);
 
-		add_filter( 'the_content', array( Api_Functions::class, 'the_content' ) );
+		lloc\Multilingual_WP4Devs\Api_Functions::init();
 	}
 );
