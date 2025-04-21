@@ -16,7 +16,7 @@ class Test_Api_Functions extends MLWP4Devs_TestCase {
 
 		( new Api_Functions() )->demo__();
 
-		$output = 'Demo TextDemo TextDemo Text';
+		$output = 'Demo__ TextDemo__ TextDemo__ Text';
 
 		$this->expectOutputString( $output );
 	}
@@ -28,7 +28,7 @@ class Test_Api_Functions extends MLWP4Devs_TestCase {
 
 		( new Api_Functions() )->demo_e();
 
-		$output = 'Demo Text with _eDemo Text with esc_html_eDemo Text with esc_attr_e';
+		$output = 'Demo_e TextDemo_e TextDemo_e Text';
 		$this->expectOutputString( $output );
 	}
 
@@ -41,7 +41,7 @@ class Test_Api_Functions extends MLWP4Devs_TestCase {
 
 		( new Api_Functions() )->demo_x();
 
-		$output = 'Demo Text with _xDemo Text with _exDemo Text with esc_html_xDemo Text with esc_attr_x';
+		$output = 'Demo_x TextDemo_x TextDemo_x TextDemo_x Text';
 		$this->expectOutputString( $output );
 	}
 
@@ -53,7 +53,7 @@ class Test_Api_Functions extends MLWP4Devs_TestCase {
 			}
 		);
 
-		$output = 'Demo Content - Any string1 star5 stars';
+		$output = '1 star5 starsDemo Content - A and B';
 		$this->assertSame( $output, ( new Api_Functions() )->demo_n() );
 	}
 }
