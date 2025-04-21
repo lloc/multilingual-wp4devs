@@ -3,7 +3,7 @@
 echo ""
 echo "phpcbf pre commit hook start"
 
-PHP_CS_FIXER="composer fix"
+PHP_CS_FIXER="vendor/bin/phpcbf"
 HAS_PHP_CS_FIXER=false
 
 # check if php-cs-fixer is installed as a composer dependency
@@ -18,7 +18,7 @@ if $HAS_PHP_CS_FIXER; then
 
   if [ ! -z "${CHANGED_FILES}" ]; then
     # runs phpcbf on the changed files
-    vendor/bin/phpcbf -w --standard=WordPress ${CHANGED_FILES}
+    vendor/bin/phpcbf -w ${CHANGED_FILES}
     # adds the changed files to staging again
     git add ${CHANGED_FILES}
   fi
