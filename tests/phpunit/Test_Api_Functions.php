@@ -46,14 +46,24 @@ class Test_Api_Functions extends MLWP4Devs_TestCase {
 	}
 
 	public function test_demo_n(): void {
-		Functions\expect( '__' )->once()->andReturnFirstArg();
 		Functions\expect( '_n' )->twice()->andReturnUsing(
 			function ( $single, $plural, $number ) {
 				return $number === 1 ? $single : $plural;
 			}
 		);
 
-		$output = '1 star5 starsDemo Content - A and B';
+		$output = '1 star5 stars';
 		$this->assertSame( $output, ( new Api_Functions() )->demo_n() );
 	}
+
+    public function test_demo_(): void {
+        Functions\expect( '__' )->once()->andReturnFirstArg();
+        Functions\expect( 'wp_kses_post' )->once()->andReturnFirstArg();
+
+        ( new Api_Functions() )->demo_placeholders();
+
+        $output = 'Demo Content - A and B';
+        $this->expectOutputString( $output );
+    }
+
 }
