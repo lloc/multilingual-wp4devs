@@ -59,9 +59,7 @@ class Api_Functions {
 	public function demo_x(): void {
 		$text = _x( 'Demo Text with _x', 'Demo Context', 'multilingual-wp4devs' );
 
-		/**
-         * Never trust translated strings — always escape them before output.
-         */
+		// Never trust translated strings — always escape them before output.
 		echo esc_html( $text );
 
         // phpcs:ignore WordPress.Security.EscapeOutput.UnsafePrintingFunction
