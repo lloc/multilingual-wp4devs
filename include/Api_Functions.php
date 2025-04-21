@@ -44,7 +44,8 @@ class Api_Functions {
 		_e( 'Demo Text with _e', 'multilingual-wp4devs' );
 
         /**
-         * _e() should not be used in production as it outputs unescaped text — prefer esc_html_e() or esc_attr_e().
+         * _e() should not be used in production as it outputs unescaped text —
+         * prefer esc_html_e() or esc_attr_e().
          */
 		esc_html_e( 'Demo Text with esc_html_e', 'multilingual-wp4devs' );
 		esc_attr_e( 'Demo Text with esc_attr_e', 'multilingual-wp4devs' );
@@ -67,7 +68,8 @@ class Api_Functions {
 		_ex( 'Demo Text with _ex', 'Demo Context', 'multilingual-wp4devs' );
 
         /**
-         * _ex() echoes unescaped text — use esc_html_x() or esc_attr_x() for safe output in production.
+         * _ex() echoes unescaped text —
+         * use esc_html_x() or esc_attr_x() for safe output in production.
          */
         echo esc_html_x( 'Demo Text with esc_html_x', 'Demo Context', 'multilingual-wp4devs' );
 		echo esc_attr_x( 'Demo Text with esc_attr_x', 'Demo Context', 'multilingual-wp4devs' );
