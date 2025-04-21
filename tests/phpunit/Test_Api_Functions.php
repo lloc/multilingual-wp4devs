@@ -32,28 +32,28 @@ class Test_Api_Functions extends MLWP4Devs_TestCase {
 		$this->expectOutputString( $output );
 	}
 
-    public function test_demo_x(): void {
-        Functions\expect( '_x' )->once()->andReturnFirstArg();
-        Functions\expect( 'esc_html' )->once()->andReturnFirstArg();
-        Functions\when( '_ex' )->echoArg();
-        Functions\expect( 'esc_html_x' )->once()->andReturnFirstArg();
-        Functions\expect( 'esc_attr_x' )->once()->andReturnFirstArg();
+	public function test_demo_x(): void {
+		Functions\expect( '_x' )->once()->andReturnFirstArg();
+		Functions\expect( 'esc_html' )->once()->andReturnFirstArg();
+		Functions\when( '_ex' )->echoArg();
+		Functions\expect( 'esc_html_x' )->once()->andReturnFirstArg();
+		Functions\expect( 'esc_attr_x' )->once()->andReturnFirstArg();
 
-        ( new Api_Functions() )->demo_x();
+		( new Api_Functions() )->demo_x();
 
-        $output = 'Demo Text with _xDemo Text with _exDemo Text with esc_html_xDemo Text with esc_attr_x';
-        $this->expectOutputString( $output );
-    }
+		$output = 'Demo Text with _xDemo Text with _exDemo Text with esc_html_xDemo Text with esc_attr_x';
+		$this->expectOutputString( $output );
+	}
 
-    public function test_demo_n(): void {
-        Functions\expect( '__' )->once()->andReturnFirstArg();
-        Functions\expect( '_n' )->twice()->andReturnUsing(
-            function ( $single, $plural, $number ) {
-                return $number === 1 ? $single : $plural;
-            }
-        );
+	public function test_demo_n(): void {
+		Functions\expect( '__' )->once()->andReturnFirstArg();
+		Functions\expect( '_n' )->twice()->andReturnUsing(
+			function ( $single, $plural, $number ) {
+				return $number === 1 ? $single : $plural;
+			}
+		);
 
-        $output = 'Demo Content - Any string1 star5 stars';
-        $this->assertSame( $output, ( new Api_Functions() )->demo_n() );
-    }
+		$output = 'Demo Content - Any string1 star5 stars';
+		$this->assertSame( $output, ( new Api_Functions() )->demo_n() );
+	}
 }
