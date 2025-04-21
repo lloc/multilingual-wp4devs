@@ -76,7 +76,5 @@ add_action(
 			'multilingual-wp4devs',
 			plugin_dir_path( __FILE__ ) . 'languages'
 		);
-
-		lloc\Multilingual_WP4Devs\Api_Functions::init();
 	}
 );
