@@ -83,16 +83,16 @@ class Api_Functions {
 	public function demo_n( string $content = '' ): string {
 		$stars = 1;
 
-		/* translators: %d is an integer for a star-rating. */
 		$content .= sprintf(
+			// translators: %d is an integer for a star-rating.
 			_n( '%d star', '%d stars', $stars, 'multilingual-wp4devs' ),
 			$stars
 		);
 
 		$stars = 5;
 
-		/* translators: %d is an integer for a star-rating. */
 		$content .= sprintf(
+			// translators: %d is an integer for a star-rating.
 			_n( '%d star', '%d stars', $stars, 'multilingual-wp4devs' ),
 			$stars
 		);
@@ -106,8 +106,8 @@ class Api_Functions {
 	 * @return void
 	 */
 	public function demo_placeholders(): void {
-		/* translators: %1$s can be any character, %2$s is another placeholder string. */
 		$content = sprintf(
+			// translators: %1$s can be any character, %2$s is another placeholder string.
 			__( 'Demo Content - %1$s and %2$s', 'multilingual-wp4devs' ),
 			'A',
 			'B'

@@ -9,9 +9,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-04-19T07:10:52+00:00\n"
+"POT-Creation-Date: 2025-04-22T14:06:59+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.11.0\n"
+"X-Generator: WP-CLI 2.12.0-alpha\n"
 "X-Domain: multilingual-wp4devs\n"
 
 #. Plugin Name of the plugin
@@ -34,55 +34,38 @@ msgstr ""
 msgid "http://lloc.de/"
 msgstr ""
 
-#: include/Api_Functions.php:32
-#: include/Api_Functions.php:38
-#: include/Api_Functions.php:39
-msgid "Demo Text"
+#: include/Api_Functions.php:23
+#: include/Api_Functions.php:33
+#: include/Api_Functions.php:34
+msgid "Demo__ Text"
 msgstr ""
 
-#: include/Api_Functions.php:49
-msgid "Demo Text with _e"
+#: include/Api_Functions.php:44
+#: include/Api_Functions.php:50
+#: include/Api_Functions.php:51
+msgid "Demo_e Text"
 msgstr ""
 
-#: include/Api_Functions.php:52
-msgid "Demo Text with esc_html_e"
-msgstr ""
-
-#: include/Api_Functions.php:53
-msgid "Demo Text with esc_attr_e"
-msgstr ""
-
-#: include/Api_Functions.php:63
-msgctxt "Demo Context"
-msgid "Demo Text with _x"
-msgstr ""
-
+#: include/Api_Functions.php:60
 #: include/Api_Functions.php:66
+#: include/Api_Functions.php:72
+#: include/Api_Functions.php:73
 msgctxt "Demo Context"
-msgid "Demo Text with _ex"
+msgid "Demo_x Text"
 msgstr ""
 
-#: include/Api_Functions.php:68
-msgctxt "Demo Context"
-msgid "Demo Text with esc_html_x"
-msgstr ""
-
-#: include/Api_Functions.php:69
-msgctxt "Demo Context"
-msgid "Demo Text with esc_attr_x"
-msgstr ""
-
-#. translators: %d is an integer for a star-rating
-#: include/Api_Functions.php:91
-msgid "Demo Content %d something"
-msgstr ""
-
-#. translators: %d is an integer for a star-rating
-#: include/Api_Functions.php:94
+#: include/Api_Functions.php:88
+#: include/Api_Functions.php:96
+#, php-format
 msgid "%d star"
 msgid_plural "%d stars"
 msgstr[0] ""
 msgstr[1] ""
+
+#: include/Api_Functions.php:111
+#, php-format
+msgid "Demo Content - %1$s and %2$s"
+msgstr ""
 
 #: js/index.js:1
 #: src/index.js:6
@@ -90,7 +73,13 @@ msgid "Simple Block"
 msgstr ""
 
 #: js/index.js:1
-#: src/index.js:10
-#: src/index.js:14
 msgid "Hello World"
+msgstr ""
+
+#: src/index.js:10
+msgid "Hello Editor"
+msgstr ""
+
+#: src/index.js:14
+msgid "Dear Reader"
 msgstr ""

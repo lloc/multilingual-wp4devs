@@ -1,13 +1,25 @@
 <?php
+/**
+ * Test Api_Functions
+ *
+ * @package lloc\MLWP4Devs_Tests
+ */
 
 namespace lloc\MLWP4Devs_Tests;
 
 use lloc\Multilingual_WP4Devs\Api_Functions;
 use Brain\Monkey\Functions;
 
+/**
+ * Class Test_Api_Functions
+ */
 class Test_Api_Functions extends MLWP4Devs_TestCase {
 
-
+	/**
+	 * Test the __ functions.
+	 *
+	 * @return void
+	 */
 	public function test_demo__(): void {
 		Functions\expect( '__' )->once()->andReturnFirstArg();
 		Functions\expect( 'esc_html' )->once()->andReturnFirstArg();
@@ -21,6 +33,11 @@ class Test_Api_Functions extends MLWP4Devs_TestCase {
 		$this->expectOutputString( $output );
 	}
 
+	/**
+	 * Test the _e functions.
+	 *
+	 * @return void
+	 */
 	public function test_demo_e(): void {
 		Functions\when( '_e' )->echoArg();
 		Functions\when( 'esc_html_e' )->echoArg();
@@ -32,6 +49,11 @@ class Test_Api_Functions extends MLWP4Devs_TestCase {
 		$this->expectOutputString( $output );
 	}
 
+	/**
+	 * Test the _x functions.
+	 *
+	 * @return void
+	 */
 	public function test_demo_x(): void {
 		Functions\expect( '_x' )->once()->andReturnFirstArg();
 		Functions\expect( 'esc_html' )->once()->andReturnFirstArg();
@@ -45,10 +67,15 @@ class Test_Api_Functions extends MLWP4Devs_TestCase {
 		$this->expectOutputString( $output );
 	}
 
+	/**
+	 * Test the _n functions.
+	 *
+	 * @return void
+	 */
 	public function test_demo_n(): void {
 		Functions\expect( '_n' )->twice()->andReturnUsing(
 			function ( $single, $plural, $number ) {
-				return $number === 1 ? $single : $plural;
+				return 1 === $number ? $single : $plural;
 			}
 		);
 
@@ -56,7 +83,12 @@ class Test_Api_Functions extends MLWP4Devs_TestCase {
 		$this->assertSame( $output, ( new Api_Functions() )->demo_n() );
 	}
 
-	public function test_demo_(): void {
+	/**
+	 * Test the demo_placeholders method.
+	 *
+	 * @return void
+	 */
+	public function test_demo_placeholders(): void {
 		Functions\expect( '__' )->once()->andReturnFirstArg();
 		Functions\expect( 'wp_kses_post' )->once()->andReturnFirstArg();
 
