@@ -56,14 +56,13 @@ class Test_Api_Functions extends MLWP4Devs_TestCase {
 		$this->assertSame( $output, ( new Api_Functions() )->demo_n() );
 	}
 
-    public function test_demo_(): void {
-        Functions\expect( '__' )->once()->andReturnFirstArg();
-        Functions\expect( 'wp_kses_post' )->once()->andReturnFirstArg();
+	public function test_demo_(): void {
+		Functions\expect( '__' )->once()->andReturnFirstArg();
+		Functions\expect( 'wp_kses_post' )->once()->andReturnFirstArg();
 
-        ( new Api_Functions() )->demo_placeholders();
+		( new Api_Functions() )->demo_placeholders();
 
-        $output = 'Demo Content - A and B';
-        $this->expectOutputString( $output );
-    }
-
+		$output = 'Demo Content - A and B';
+		$this->expectOutputString( $output );
+	}
 }
