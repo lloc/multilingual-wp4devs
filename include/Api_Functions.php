@@ -115,4 +115,35 @@ class Api_Functions {
 
 		echo wp_kses_post( $content );
 	}
+
+	/**
+	 * Demos the use of WordPress API date_i18n functions.
+	 *
+	 * @return void
+	 */
+	public function demo_date_i18n(): void {
+		$date = date_i18n( get_option( 'date_format' ) );
+
+		echo esc_html( $date );
+
+		$timestamp = mktime( 13, 42, 23, 7, 17, 2025 );
+		$date      = date_i18n( get_option( 'date_format' ), $timestamp );
+
+		echo esc_html( $date );
+	}
+
+	/**
+	 * Demos the use of WordPress API number_format_i18n functions.
+	 *
+	 * @return void
+	 */
+	public function demo_number_format_i18n(): void {
+		$number = number_format_i18n( 1234567.89 );
+
+		echo esc_html( $number );
+
+		$number = number_format_i18n( 1234567.89, 2 );
+
+		echo esc_html( $number );
+	}
 }

@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-04-22T14:06:59+00:00\n"
+"POT-Creation-Date: 2025-04-22T14:26:27+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0-alpha\n"
 "X-Domain: multilingual-wp4devs\n"
@@ -54,6 +54,7 @@ msgctxt "Demo Context"
 msgid "Demo_x Text"
 msgstr ""
 
+#. translators: %d is an integer for a star-rating.
 #: include/Api_Functions.php:88
 #: include/Api_Functions.php:96
 #, php-format
@@ -62,6 +63,7 @@ msgid_plural "%d stars"
 msgstr[0] ""
 msgstr[1] ""
 
+#. translators: %1$s can be any character, %2$s is another placeholder string.
 #: include/Api_Functions.php:111
 #, php-format
 msgid "Demo Content - %1$s and %2$s"

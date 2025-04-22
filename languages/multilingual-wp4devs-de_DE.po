@@ -28,13 +28,10 @@ msgstr ""
 msgid "http://lloc.de/"
 msgstr ""
 
-#. translators: %d is an integer for a star-rating
-#: include/Api_Functions.php:91
-msgid "Demo Content %d something"
-msgstr ""
-
-#. translators: %d is an integer for a star-rating
-#: include/Api_Functions.php:94
+#. translators: %d is an integer for a star-rating.
+#: include/Api_Functions.php:88
+#: include/Api_Functions.php:96
+#, php-format
 msgid "%d star"
 msgid_plural "%d stars"
 msgstr[0] ""
@@ -45,51 +42,45 @@ msgstr[1] ""
 msgid "Multilingual WordPress for developers"
 msgstr ""
 
-#: include/Api_Functions.php:32
-#: include/Api_Functions.php:38
-#: include/Api_Functions.php:39
-msgid "Demo Text"
-msgstr ""
-
-#: include/Api_Functions.php:49
-msgid "Demo Text with _e"
-msgstr ""
-
-#: include/Api_Functions.php:52
-msgid "Demo Text with esc_html_e"
-msgstr ""
-
-#: include/Api_Functions.php:53
-msgid "Demo Text with esc_attr_e"
-msgstr ""
-
-#: include/Api_Functions.php:63
-msgctxt "Demo Context"
-msgid "Demo Text with _x"
-msgstr ""
-
-#: include/Api_Functions.php:66
-msgctxt "Demo Context"
-msgid "Demo Text with _ex"
-msgstr ""
-
-#: include/Api_Functions.php:68
-msgctxt "Demo Context"
-msgid "Demo Text with esc_html_x"
-msgstr ""
-
-#: include/Api_Functions.php:69
-msgctxt "Demo Context"
-msgid "Demo Text with esc_attr_x"
-msgstr ""
-
 #: js/index.js:1
 #: src/index.js:6
 msgid "Simple Block"
 msgstr ""
 
 #: js/index.js:1
-#: src/index.js:10
-#: src/index.js:14
 msgid "Hello World"
+msgstr ""
+
+#: include/Api_Functions.php:23
+#: include/Api_Functions.php:33
+#: include/Api_Functions.php:34
+msgid "Demo__ Text"
+msgstr ""
+
+#: include/Api_Functions.php:44
+#: include/Api_Functions.php:50
+#: include/Api_Functions.php:51
+msgid "Demo_e Text"
+msgstr ""
+
+#: include/Api_Functions.php:60
+#: include/Api_Functions.php:66
+#: include/Api_Functions.php:72
+#: include/Api_Functions.php:73
+msgctxt "Demo Context"
+msgid "Demo_x Text"
+msgstr ""
+
+#. translators: %1$s can be any character, %2$s is another placeholder string.
+#: include/Api_Functions.php:111
+#, php-format
+msgid "Demo Content - %1$s and %2$s"
+msgstr ""
+
+#: src/index.js:10
+msgid "Hello Editor"
+msgstr ""
+
+#: src/index.js:14
+msgid "Dear Reader"
 msgstr ""

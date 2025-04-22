@@ -16,7 +16,7 @@ use Brain\Monkey\Functions;
 class Test_Api_Functions extends MLWP4Devs_TestCase {
 
 	/**
-	 * Test the __ functions.
+	 * Tests the __ functions.
 	 *
 	 * @return void
 	 */
@@ -34,7 +34,7 @@ class Test_Api_Functions extends MLWP4Devs_TestCase {
 	}
 
 	/**
-	 * Test the _e functions.
+	 * Tests the _e functions.
 	 *
 	 * @return void
 	 */
@@ -50,7 +50,7 @@ class Test_Api_Functions extends MLWP4Devs_TestCase {
 	}
 
 	/**
-	 * Test the _x functions.
+	 * Tests the _x functions.
 	 *
 	 * @return void
 	 */
@@ -68,7 +68,7 @@ class Test_Api_Functions extends MLWP4Devs_TestCase {
 	}
 
 	/**
-	 * Test the _n functions.
+	 * Tests the _n functions.
 	 *
 	 * @return void
 	 */
@@ -84,7 +84,7 @@ class Test_Api_Functions extends MLWP4Devs_TestCase {
 	}
 
 	/**
-	 * Test the demo_placeholders method.
+	 * Tests the demo_placeholders method.
 	 *
 	 * @return void
 	 */
@@ -96,5 +96,38 @@ class Test_Api_Functions extends MLWP4Devs_TestCase {
 
 		$output = 'Demo Content - A and B';
 		$this->expectOutputString( $output );
+	}
+
+	/**
+	 * Tests the demo_date_i18n method.
+	 *
+	 * @return void
+	 */
+	public function test_demo_date_i18n() {
+		Functions\expect( 'get_option' )->twice()->andReturn( 'F j, Y' );
+		Functions\expect( 'date_i18n' )->twice()->andReturn( 'January 1, 2023' );
+		Functions\expect( 'esc_html' )->twice()->andReturnFirstArg();
+
+		( new Api_Functions() )->demo_date_i18n();
+
+		$this->expectOutputString( 'January 1, 2023January 1, 2023' );
+	}
+
+	/**
+	 * Test the demo_number_format_i18n method.
+	 *
+	 * @return void
+	 */
+	public function test_demo_number_format_i18n() {
+		Functions\expect( 'number_format_i18n' )->twice()->andReturnUsing(
+			function ( $number, $decimals = 0 ) {
+				return number_format( $number, $decimals, '.', ',' );
+			}
+		);
+		Functions\expect( 'esc_html' )->twice()->andReturnFirstArg();
+
+		( new Api_Functions() )->demo_number_format_i18n();
+
+		$this->expectOutputString( '1,234,5681,234,567.89' );
 	}
 }
