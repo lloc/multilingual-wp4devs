@@ -7,10 +7,10 @@ registerBlockType( 'lloc/multilingual-wp4devs', {
 	category: 'widgets',
 
 	edit: () => {
-		return <p>{ __( 'Hello World', 'multilingual-wp4devs' ) }</p>;
+		return <p>{ __( 'Hello Editor', 'multilingual-wp4devs' ) }</p>;
 	},
 
 	save: () => {
-		return <p>{ __( 'Hello World', 'multilingual-wp4devs' ) }</p>;
+		return <p>{ __( 'Dear Reader', 'multilingual-wp4devs' ) }</p>;
 	},
 } );

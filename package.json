@@ -9,6 +9,8 @@
         "@wordpress/scripts": "^30.15.0"
     },
     "dependencies": {
-        "@wordpress/env": "^10.22.0"
+        "@wordpress/blocks": "^14.11.0",
+        "@wordpress/env": "^10.22.0",
+        "@wordpress/i18n": "^5.22.0"
     }
 }
