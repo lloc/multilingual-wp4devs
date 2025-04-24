@@ -1,12 +1,19 @@
 {
     "scripts": {
         "build": "wp-scripts build --webpack-src-dir=src/ --output-path=js/",
+        "test:js": "jest",
         "lint:js": "wp-scripts lint-js src/",
         "fix:js": "wp-scripts lint-js src/ --fix",
         "start": "wp-scripts start"
     },
+    "jest": {
+        "preset": "@wordpress/jest-preset-default"
+    },
     "devDependencies": {
-        "@wordpress/scripts": "^30.15.0"
+        "@wordpress/babel-preset-default": "^8.22.0",
+        "@wordpress/jest-preset-default": "^12.22.0",
+        "@wordpress/scripts": "^30.15.0",
+        "jest": "^29.7.0"
     },
     "dependencies": {
         "@wordpress/blocks": "^14.11.0",

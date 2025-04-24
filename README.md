@@ -34,45 +34,69 @@ The plugin uses PSR-4 autoloading for both runtime and test classes:
 
 Run `composer install` to install dependencies.
 
-### 🔍 Quality Assurance
+---
 
-The plugin comes with several scripts to ensure code quality and consistency throughout development:
+## 🔍 Quality Assurance
 
-| Script         | Description                            |
-|----------------|----------------------------------------|
-| `test:php`     | Runs PHPUnit tests                     |
-| `coverage:php` | Generates code coverage in HTML format |
-| `lint:php`     | Lints PHP code using PHPCS             |
-| `fix:php`      | Auto-fixes PHP code style issues       |
-| `phpstan`      | Runs static analysis with PHPStan      |
-| `qa`           | Runs both code linting and static analysis |
+This plugin includes comprehensive QA tooling for both PHP and JavaScript.
 
-> Included QA tools:
+### PHP QA Tools
+
+| Script         | Description                              |
+|----------------|------------------------------------------|
+| `test:php`     | Runs PHPUnit tests                       |
+| `coverage:php` | Generates code coverage (HTML output)    |
+| `lint:php`     | Runs PHPCS on all PHP files              |
+| `fix:php`      | Auto-fixes code style issues via PHPCBF  |
+| `phpstan`      | Runs static analysis via PHPStan         |
+| `qa`           | Shortcut to run both code style and static analysis |
+
+> Tools used:
 > - [PHPUnit](https://phpunit.de/)
 > - [Brain Monkey](https://github.com/Brain-WP/BrainMonkey)
 > - [PHPStan for WordPress](https://github.com/szepeviktor/phpstan-wordpress)
-> - [WPCS](https://github.com/WordPress/WordPress-Coding-Standards)
+> - [WPCS (WordPress Coding Standards)](https://github.com/WordPress/WordPress-Coding-Standards)
 
-### 🌍 Internationalization
+### JavaScript QA Tools
 
-The plugin supports full internationalization workflows, including the generation of modern translation file formats:
+| Script         | Description                             |
+|----------------|-----------------------------------------|
+| `test:js`      | Runs JavaScript tests using Jest        |
+| `lint:js`      | Lints JS files using ESLint             |
+| `fix:js`       | Auto-fixes JS code style using ESLint   |
+
+> Jest is configured using `@wordpress/jest-preset-default`.
+
+---
+
+### Unified Scripts
+
+| Script         | Description                                |
+|----------------|--------------------------------------------|
+| `test`         | Runs both PHP and JS tests                 |
+| `lint`         | Lints both PHP and JS code                 |
+| `fix`          | Auto-fixes style issues in PHP and JS      |
+
+---
+
+## 🌍 Internationalization
+
+The plugin supports full internationalization workflows with WP-CLI:
 
 | Script         | Description                                          |
 |----------------|------------------------------------------------------|
-| `i18n:pot`     | Generates a `.pot` file from source strings          |
-| `i18n:po`      | Updates `.po` files from the `.pot`                  |
-| `i18n:mo`      | Compiles `.po` files to `.mo` files                  |
-| `i18n:json`    | Generates `.json` files for JavaScript (JED format)  |
-| `i18n:php`     | Generates `.l10n.php` files for performance          |
+| `i18n:pot`     | Generates a `.pot` file from translatable strings   |
+| `i18n:po`      | Updates `.po` files from the `.pot`                 |
+| `i18n:mo`      | Compiles `.po` files into `.mo`                     |
+| `i18n:json`    | Generates `.json` translation files for JavaScript |
+| `i18n:php`     | Creates `.l10n.php` files for improved performance |
 
-> These commands use WP-CLI’s `wp i18n` interface under the hood.
+---
 
-### 🔧 Build & Project Setup
+## 🔧 Build & Project Setup
 
-These scripts are included to help with setting up and maintaining the development environment:
-
-| Script                   | Description                                               |
-|--------------------------|-----------------------------------------------------------|
-| `build`                  | Installs dependencies and builds JavaScript assets        |
-| `githooks`               | Installs a pre-commit hook (if available in `bin/`)       |
-| `post-install-cmd` / `post-update-cmd` | Automatically sets up git hooks after Composer install/update |
+| Script         | Description                                                 |
+|----------------|-------------------------------------------------------------|
+| `build`        | Runs full build: Composer install, JS deps, `npm run build` |
+| `githooks`     | Installs the pre-commit hook from `/bin/githooks` if present |
+| `post-install-cmd`, `post-update-cmd` | Runs githooks setup automatically after install/update |
