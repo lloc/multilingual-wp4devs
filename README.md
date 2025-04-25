@@ -90,13 +90,3 @@ The plugin supports full internationalization workflows with WP-CLI:
 | `i18n:mo`      | Compiles `.po` files into `.mo`                     |
 | `i18n:json`    | Generates `.json` translation files for JavaScript |
 | `i18n:php`     | Creates `.l10n.php` files for improved performance |
-
----
-
-## 🔧 Build & Project Setup
-
-| Script         | Description                                                 |
-|----------------|-------------------------------------------------------------|
-| `build`        | Runs full build: Composer install, JS deps, `npm run build` |
-| `githooks`     | Installs the pre-commit hook from `/bin/githooks` if present |
-| `post-install-cmd`, `post-update-cmd` | Runs githooks setup automatically after install/update |
