@@ -55,14 +55,13 @@ add_action(
 		);
 
 		wp_register_script(
-			'multilingual-wp4devs',
+			'multilingual-wp4devs-script',
 			plugins_url( 'js/index.js', __FILE__ ),
 			array( 'wp-blocks', 'react', 'wp-i18n', 'wp-block-editor' ),
 			'1.0.0',
 			true
 		);
 
-		// Register the block type.
 		register_block_type(
 			'lloc/multilingual-wp4devs',
 			array(
