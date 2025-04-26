@@ -3,6 +3,7 @@
     <description>PHPCS example</description>
     <config name="testVersion" value="8.1-"/>
     <exclude-pattern>js/*</exclude-pattern>
+    <exclude-pattern>docs/*</exclude-pattern>
     <exclude-pattern>languages/*</exclude-pattern>
     <exclude-pattern>node_modules/*</exclude-pattern>
     <exclude-pattern>vendor/*</exclude-pattern>
