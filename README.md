@@ -1,8 +1,13 @@
 # Multilingual WordPress for Developers
 
-This plugin is a companion to my talk *“Multilingual WordPress for Developers”*. It includes practical examples and techniques covered during the session, aimed at helping developers confidently build multilingual WordPress websites.
+This plugin is a companion to my talk *“Multilingual WordPress for Developers”*. It includes 
+practical examples and techniques covered during the session, aimed at helping developers confidently build multilingual WordPress websites.
 
 Discover how to make the most of WordPress’s internationalization (i18n) and localization (l10n) features, set up multilingual environments using multisite or plugins, and streamline your workflow with custom code — all focused on simplifying multilingual development.
+
+## Slides and presented code
+
+The slides and code examples from the talk are available in the [docs/](docs/) directory of this repository. You can [view the slides](./docs/multilingual-wordpress-for-developers.pdf) online or download them for offline use.
 
 ## Composer & Developer Tooling
 
