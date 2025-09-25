@@ -7,19 +7,19 @@ Discover how to make the most of WordPress’s internationalization (i18n) and l
 
 ## Slides and presented code
 
-The slides and code examples from the talk are available in the [docs/](docs/) directory of this repository. You can [view the slides](./docs/multilingual-wordpress-for-developers.pdf) online or download them for offline use.
+The slides and code examples from the talk are available in the [docs/](./docs) directory of this repository. You can [view the slides](./docs/multilingual-wordpress-for-developers.pdf) online or download them for offline use.
 
 ## Composer & Developer Tooling
 
 This plugin includes a set of tools and scripts to support modern development workflows for multilingual WordPress projects.
 
-### 🛠 Requirements
+### Requirements
 
 - PHP >= 8.1
 - Node.js (for JavaScript tooling)
 - [WP-CLI](https://wp-cli.org/) (included via `wp-cli/wp-cli-bundle`)
 
-### 📦 Composer Setup
+### Composer Setup
 
 The plugin uses PSR-4 autoloading for both runtime and test classes:
 
@@ -41,7 +41,7 @@ Run `composer install` to install dependencies.
 
 ---
 
-## 🔍 Quality Assurance
+## Quality Assurance
 
 This plugin includes comprehensive QA tooling for both PHP and JavaScript.
 
@@ -84,14 +84,15 @@ This plugin includes comprehensive QA tooling for both PHP and JavaScript.
 
 ---
 
-## 🌍 Internationalization
+## Internationalization
 
-The plugin supports full internationalization workflows with WP-CLI:
+The plugin supports full internationalization workflows with WP-CLI (by using a Composer plugin):
 
-| Script         | Description                                          |
-|----------------|------------------------------------------------------|
-| `i18n:pot`     | Generates a `.pot` file from translatable strings   |
-| `i18n:po`      | Updates `.po` files from the `.pot`                 |
-| `i18n:mo`      | Compiles `.po` files into `.mo`                     |
-| `i18n:json`    | Generates `.json` translation files for JavaScript |
-| `i18n:php`     | Creates `.l10n.php` files for improved performance |
+| Script           | Description                                                |
+|------------------|------------------------------------------------------------|
+| `i18n:make-pot`  | Generates a `.pot` file from translatable strings.         |
+| `i18n:create-po` | Creates a `.po` file from the `.pot` for f´given language. |
+| `i18n:make-mo`   | Compiles `.po` files into `.mo`.                           |
+| `i18n:make-json` | Generates `.json` translation files for JavaScript.        |
+| `i18n:make-php`  | Creates `.l10n.php` files for improved performance.        |
+| `i18n:update-po` | Updates `.po` files from the `.pot`.                       |
