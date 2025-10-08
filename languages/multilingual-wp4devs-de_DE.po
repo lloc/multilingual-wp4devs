@@ -1,17 +1,22 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Multilingual 4 Devs 1.0.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wceu-2025\n"
+"Project-Id-Version: Multilingual WordPress for developers 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/multilingual-wp4devs\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-04-16T11:06:38+00:00\n"
+"POT-Creation-Date: 2025-09-22T12:52:50+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language: \n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: multilingual-wp4devs\n"
+
+#. Plugin Name of the plugin
+#: index.php
+msgid "Multilingual WordPress for developers"
+msgstr ""
 
 #. Description of the plugin
 #: index.php
@@ -28,41 +33,19 @@ msgstr ""
 msgid "http://lloc.de/"
 msgstr ""
 
-#. translators: %d is an integer for a star-rating.
-#: include/Api_Functions.php:88
-#: include/Api_Functions.php:96
-#, php-format
-msgid "%d star"
-msgid_plural "%d stars"
-msgstr[0] ""
-msgstr[1] ""
-
-#. Plugin Name of the plugin
-#: index.php
-msgid "Multilingual WordPress for developers"
-msgstr ""
-
-#: js/index.js:1
-#: src/index.js:6
-msgid "Simple Block"
-msgstr ""
-
-#: js/index.js:1
-msgid "Hello World"
-msgstr ""
-
+#: docs/slide-7.example.php:3
+#: docs/slide-9.example.php:3
+#: docs/slide-9.example.php:5
 #: include/Api_Functions.php:23
 #: include/Api_Functions.php:33
 #: include/Api_Functions.php:34
 msgid "Demo__ Text"
 msgstr ""
 
-#: include/Api_Functions.php:44
-#: include/Api_Functions.php:50
-#: include/Api_Functions.php:51
-msgid "Demo_e Text"
-msgstr ""
-
+#: docs/slide-7.example.php:8
+#: docs/slide-8.example.php:10
+#: docs/slide-9.example.php:11
+#: docs/slide-9.example.php:17
 #: include/Api_Functions.php:60
 #: include/Api_Functions.php:66
 #: include/Api_Functions.php:72
@@ -71,16 +54,42 @@ msgctxt "Demo Context"
 msgid "Demo_x Text"
 msgstr ""
 
+#. translators: %d is an integer for a star-rating.
+#: docs/slide-7.example.php:16
+#: docs/slide-11.example.php:7
+#: include/Api_Functions.php:88
+#: include/Api_Functions.php:96
+msgid "%d star"
+msgid_plural "%d stars"
+msgstr[0] ""
+msgstr[1] ""
+
+#: docs/slide-8.example.php:4
+#: docs/slide-9.example.php:7
+#: docs/slide-9.example.php:9
+#: include/Api_Functions.php:44
+#: include/Api_Functions.php:50
+#: include/Api_Functions.php:51
+msgid "Demo_e Text"
+msgstr ""
+
 #. translators: %1$s can be any character, %2$s is another placeholder string.
+#: docs/slide-11.example.php:13
 #: include/Api_Functions.php:111
-#, php-format
 msgid "Demo Content - %1$s and %2$s"
 msgstr ""
 
+#: js/index.js:1
+#: src/index.js:6
+msgid "Simple Block"
+msgstr ""
+
+#: js/index.js:1
 #: src/index.js:10
 msgid "Hello Editor"
 msgstr ""
 
+#: js/index.js:1
 #: src/index.js:14
 msgid "Dear Reader"
 msgstr ""

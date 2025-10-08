@@ -23,12 +23,13 @@
     "config": {
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "lloc/composer-i18n-scripts": true
         }
     },
     "require": {
-       "php": ">=8.1",
-        "wp-cli/wp-cli-bundle": "^2.12@dev"
+        "php": ">=8.1",
+        "lloc/composer-i18n-scripts": "dev-main"
     },
     "require-dev": {
         "phpunit/phpunit": "^10",
@@ -53,14 +54,6 @@
             "@cs",
             "@phpstan"
         ],
-        "i18n:pot": "wp i18n make-pot . languages/multilingual-wp4devs.pot",
-        "i18n:po": [
-            "if [ ! -e languages/multilingual-wp4devs-de_DE.po ]; then cp languages/multilingual-wp4devs.pot languages/multilingual-wp4devs-de_DE.po; fi",
-            "wp i18n update-po languages/multilingual-wp4devs.pot languages"
-        ],
-        "i18n:mo": "wp i18n make-mo languages",
-        "i18n:json": "wp i18n make-json languages --no-purge",
-        "i18n:php": "wp i18n make-php languages",
         "build": [
             "@composer install --no-dev",
             "npm ci",
@@ -76,5 +69,12 @@
         "post-update-cmd": [
             "@githooks"
         ]
-    }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "version": "dev-main",
+            "url": "/Users/dennis.ploetner/Projects/composer-i18n-scripts"
+        }
+    ]
 }

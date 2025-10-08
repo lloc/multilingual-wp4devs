@@ -1,2 +1,2 @@
 <?php
-return ['domain'=>'multilingual-wp4devs','plural-forms'=>NULL,'language'=>'','project-id-version'=>'Multilingual 4 Devs 1.0.0','pot-creation-date'=>'2025-04-16T11:06:38+00:00','po-revision-date'=>'YEAR-MO-DA HO:MI+ZONE','x-generator'=>'WP-CLI 2.11.0','messages'=>[]];
+return ['domain'=>'multilingual-wp4devs','plural-forms'=>NULL,'language'=>'','project-id-version'=>'Multilingual WordPress for developers 1.0.0','pot-creation-date'=>'2025-09-22T12:52:50+00:00','po-revision-date'=>'YEAR-MO-DA HO:MI+ZONE','x-generator'=>'WP-CLI 2.11.0','messages'=>[]];
